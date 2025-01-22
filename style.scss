@@ -1,0 +1,152 @@
+@import 'normalize.css';
+@import '_variables.scss';
+
+@font-face {
+    font-family: "GolosText-Bold";
+    src: url() format("woff2"), url("/fonts/GolosText-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "GolosText-SemiBold";
+    src: url() format("woff2"), url("/fonts/GolosText-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "GolosText-Medium";
+    src: url() format("woff2"), url("/fonts/GolosText-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "GolosText-Regular";
+    src: url() format("woff2"), url("/fonts/GolosText-Regular.woff") format("woff");
+}
+
+
+@font-face {
+    font-family: "Merriweather-Bold";
+    src: url() format("woff2"), url("/fonts/Merriweather-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Merriweather-Regular";
+    src: url() format("woff2"), url("/fonts/Merriweather-Regular.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "GolosText-Regular";
+    font-weight: 400;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px 72px;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 26px 0;
+
+    .logo {
+        width: 245px;
+    }
+}
+
+.intro {
+    padding: 124px 0 132px;
+    background: url('/img/intro.png') no-repeat center / cover;
+
+    &__content {
+        width: 44.4%;
+    }
+
+    h1 {
+        margin: 0 0 24px;
+        font-family: "Merriweather-Regular", serif;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 1.1;
+        color: $main-text;
+        text-transform: uppercase;
+
+
+        span {
+            display: block;
+            text-align: center;
+
+            &:first-child {
+                text-decoration: underline;
+                text-decoration-thickness: 5%;
+                text-underline-offset: 8%;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    .text {
+        display: inline-block;
+        max-width: 542px;
+        font-family: "GolosText-Regular", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.3;
+        color: $main-text;
+        text-align: center;
+    }
+
+    .buttons {
+        margin-top: 40px;
+        display: flex;
+        gap: 16px;
+
+        .button {
+            flex: 1;
+            padding: 13px 49px;
+            text-align: center;
+            border: 2px solid $main-btns;
+            border-radius: 66px;
+            font-family: "GolosText-Medium";
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.3;
+            transition: all .3s ease-in-out;
+            
+            &.support {
+                background: $main-btns;
+                color: #ffffff;
+
+                &:hover {
+                    background: $hover-accent;
+                    border-color: $hover-accent;
+                    color: $main-btns;
+                }
+            }
+
+            &.about {
+                color: $main-btns;
+
+                &:hover {
+                    background: $main-btns;
+                    color: #ffffff;
+                }
+            }
+        }
+
+    }
+}
