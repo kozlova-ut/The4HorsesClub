@@ -33,6 +33,81 @@
                 width: 394px;
             }
         } 
+
+        .line-2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 17px;
+            padding-top: 65px;
+            
+            .invitation_pic2 {
+                margin-top: -28px;
+                margin-left: -28px;
+                position: relative;
+                flex: 1 0 530px;
+                line-height: 0;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url('/img/invitation_pic2_pattern.png') no-repeat center / contain;
+                    mix-blend-mode: color-burn;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .table {
+                margin-top: 60px;
+
+                .row {
+                    display: flex;
+
+                    &:not(:last-child){
+                        border-bottom: 2px solid $table-border;
+                    }
+                    
+                    &:first-child {
+                        span {
+                            padding-top: 0;
+                        }
+                    }
+
+                    &:last-child {
+                        span {
+                            padding-bottom: 0;
+                        }
+                    }
+
+                    span {
+                        padding: 16px 16px 15px 0;
+                        font-size: 20px;
+                        line-height: 1.2;
+                        color: $main-text;
+
+                        &:first-child {
+                            flex-basis: 307px;
+                            border-right: 2px solid $table-border;
+                            font-family: "GolosText-Regular", sans-serif;
+                            font-weight: 400;
+                            opacity: .7;
+                        }
+
+                        &:last-child {
+                            padding-left: 15px;
+                            font-family: "GolosText-Bold", sans-serif;
+                            font-weight: 700;  
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: $lg) {
