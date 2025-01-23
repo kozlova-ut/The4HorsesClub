@@ -1,0 +1,76 @@
+.invitation {
+    &__content {
+        .text {
+            font-family: "Merriweather-Regular", sans-serif;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 1.35;
+            color: $main-text;
+            text-transform: uppercase;
+
+            .accent {
+                font-family: "Merriweather-Bold";
+                font-weight: 700;
+                color: $primary-accent;
+            }
+        }
+        
+        .line-1 {
+            display: flex;
+            gap: 64px;
+            align-items: center;
+            padding-top: 80px;
+            
+            .invitation_pic1_1 {
+                content: url("/img/invitation_pic1.png");
+                width: 335px;
+                margin: 24px 0;
+                display: none;
+            }
+
+            .invitation_pic1_2 {
+                content: url("/img/invitation_pic1.png");
+                width: 394px;
+            }
+        } 
+    }
+
+    @media (max-width: $lg) {
+        .invitation__content {
+
+            .text {
+                font-size: 28px;
+            }
+
+            .line-1 {
+                gap: 20px;
+
+                .invitation_pic1_2 {
+                    width: 335px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $md) {
+        .invitation__content {
+            .line-1 {
+                padding-top: 50px;
+
+                .lecture {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .invitation_pic1_1 {
+                    display: block;
+                    align-self: center;
+                }  
+
+                .invitation_pic1_2 {
+                    display: none;
+                }    
+            }
+        }
+    }
+}

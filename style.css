@@ -57,11 +57,11 @@
   line-height: 1.3;
   transition: all 0.3s ease-in-out;
 }
-.intro__content .buttons .button.support {
+.intro__content .buttons .button.invitation {
   background: #1F1F1F;
   color: #ffffff;
 }
-.intro__content .buttons .button.support:hover {
+.intro__content .buttons .button.invitation:hover {
   background: #FBCE51;
   border-color: #FBCE51;
   color: #1F1F1F;
@@ -115,6 +115,63 @@
   .intro .intro__content .text {
     max-width: none;
     text-align: left;
+  }
+}
+
+.invitation__content .text {
+  font-family: "Merriweather-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.35;
+  color: #313131;
+  text-transform: uppercase;
+}
+.invitation__content .text .accent {
+  font-family: "Merriweather-Bold";
+  font-weight: 700;
+  color: #F54932;
+}
+.invitation__content .line-1 {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  padding-top: 80px;
+}
+.invitation__content .line-1 .invitation_pic1_1 {
+  content: url("/img/invitation_pic1.png");
+  width: 335px;
+  margin: 24px 0;
+  display: none;
+}
+.invitation__content .line-1 .invitation_pic1_2 {
+  content: url("/img/invitation_pic1.png");
+  width: 394px;
+}
+@media (max-width: 1024px) {
+  .invitation .invitation__content .text {
+    font-size: 28px;
+  }
+  .invitation .invitation__content .line-1 {
+    gap: 20px;
+  }
+  .invitation .invitation__content .line-1 .invitation_pic1_2 {
+    width: 335px;
+  }
+}
+@media (max-width: 768px) {
+  .invitation .invitation__content .line-1 {
+    padding-top: 50px;
+  }
+  .invitation .invitation__content .line-1 .lecture {
+    display: flex;
+    flex-direction: column;
+  }
+  .invitation .invitation__content .line-1 .invitation_pic1_1 {
+    display: block;
+    align-self: center;
+  }
+  .invitation .invitation__content .line-1 .invitation_pic1_2 {
+    display: none;
   }
 }
 
