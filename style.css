@@ -1,6 +1,7 @@
+@charset "UTF-8";
 @import 'normalize.css';
 .intro {
-  padding: 124px 0 132px;
+  padding: 124px 0 130px;
   background: url("/img/intro.png") no-repeat center/cover;
 }
 .intro__content h1 {
@@ -93,6 +94,7 @@
 @media (max-width: 640px) {
   .intro {
     padding: 90px 0 291px;
+    background: url("/img/intro_sm.png") no-repeat right bottom/cover;
   }
   .intro .intro__content h1 {
     max-width: 335px;
@@ -172,9 +174,53 @@ a {
   width: 245px;
 }
 
+.marquee {
+  width: 100vw;
+  padding: 18px 0;
+  background: #F54932;
+  overflow: hidden;
+}
+.marquee__content {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  animation: marquee 12s linear infinite;
+}
+.marquee__content span {
+  position: relative;
+  padding-right: 30px;
+  font-family: "Merriweather-Regular", serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.1;
+  color: #ffffff;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.marquee__content span::after {
+  content: "⦁";
+  position: absolute;
+  top: -2px;
+  right: 12px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
+  }
+  .marquee {
+    padding: 10px 0;
+  }
+  .marquee__content span {
+    font-size: 16px;
   }
 }
 @media (max-width: 640px) {

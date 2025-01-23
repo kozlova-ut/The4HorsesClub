@@ -1,5 +1,5 @@
 .intro {
-    padding: 124px 0 132px;
+    padding: 124px 0 130px;
     background: url('/img/intro.png') no-repeat center / cover;
 
     &__content {
@@ -117,6 +117,7 @@
 
     @media (max-width: $sm) {
         padding: 90px 0 291px;
+        background: url('/img/intro_sm.png') no-repeat right bottom / cover;
 
         .intro__content {
 

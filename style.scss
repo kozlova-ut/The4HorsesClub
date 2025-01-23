@@ -66,9 +66,56 @@ a {
     }
 }
 
+.marquee {
+    width: 100vw;
+    padding: 18px 0;
+    background: $primary-accent;
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        width: fit-content;
+        animation: marquee 12s linear infinite;   
+    
+        span {
+            position: relative;
+            padding-right: 30px;
+            font-family: "Merriweather-Regular", serif;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 1.1;
+            color: #ffffff;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            &::after {
+                content:"\2981";
+                position: absolute;
+                top: -2px;
+                right: 12px;
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
 @media (max-width: $md) {
     .container {
         padding: 0 20px;
+    }
+
+    .marquee {
+        padding: 10px 0;
+
+        &__content {
+            span {
+                font-size: 16px;
+            }
+        }
     }
 }
 
@@ -76,7 +123,7 @@ a {
 
     .header {
         padding: 18px 0;
-        
+
         .logo {
             width: 213px;
         }
