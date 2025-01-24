@@ -41,25 +41,25 @@
             padding-top: 65px;
             
             .invitation_pic2 {
-                margin-top: -28px;
-                margin-left: -28px;
                 position: relative;
-                flex: 1 0 530px;
+                flex: 1 0 43.4%;
                 line-height: 0;
 
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    top: -28px;
+                    left: -28px;
                     width: 100%;
-                    height: 100%;
-                    background: url('/img/invitation_pic2_pattern.png') no-repeat center / contain;
+                    height: 105%;
+                    background: url('/img/invitation_pic2_pattern.png') no-repeat center / cover;
                     mix-blend-mode: color-burn;
                 }
 
                 img {
                     width: 100%;
+                    margin-top: -28px;
+                    margin-left: -28px;
                 }
             }
 
@@ -124,6 +124,45 @@
         }
     }
 
+    @media (max-width: $xl) {
+        &__content {
+            .line-2 {  
+                .table {
+                    margin-top: 58px;
+    
+                    .row {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 16px 0;
+    
+                        &:first-child {
+                            padding-top: 0;
+                        }
+    
+                        &:last-child {
+                            padding-bottom: 0;
+
+                        }
+    
+                        .cell {
+                            padding: 0;
+    
+                            &:first-child {
+                                flex-basis: auto;
+                                border-right: none;
+                            }
+    
+                            &:last-child {
+                                padding-left: 0; 
+                                padding-top: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @media (max-width: $lg) {
         .invitation__content {
 
@@ -159,6 +198,31 @@
                 .invitation_pic1_2 {
                     display: none;
                 }    
+            }
+
+            .line-2 {
+                flex-direction: column;
+                gap: 0;
+                padding-top: 0;
+
+                .invitation_pic2 {
+                    align-self: center;
+                    max-width: 335px;
+                    margin: 32px 0 19px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $xxs) {
+        .invitation__content {
+            .line-2 {
+                .invitation_pic2 {
+                    img {
+                        width: 375px;
+                        margin-left: -20px;
+                    }
+                }
             }
         }
     }
