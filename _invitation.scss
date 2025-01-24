@@ -37,34 +37,33 @@
         .line-2 {
             display: flex;
             align-items: flex-start;
-            gap: 17px;
             padding-top: 65px;
             
             .invitation_pic2 {
                 position: relative;
-                flex: 1 0 43.4%;
+                flex: 1 0 42.4%;
                 line-height: 0;
 
                 &::after {
                     content: '';
                     position: absolute;
-                    top: -28px;
-                    left: -28px;
-                    width: 100%;
-                    height: 105%;
+                    top: -29px;
+                    left: -29px;
+                    width: 103%;
+                    height: calc(100% + 29px);
                     background: url('/img/invitation_pic2_pattern.png') no-repeat center / cover;
                     mix-blend-mode: color-burn;
                 }
 
                 img {
-                    width: 100%;
-                    margin-top: -28px;
-                    margin-left: -28px;
+                    width: 103%;
+                    margin-top: -29px;
+                    margin-left: -29px;
                 }
             }
 
             .table {
-                margin-top: 58px;
+                margin-top: 60px;
 
                 .row {
                     display: flex;
@@ -128,36 +127,38 @@
         &__content {
             .line-2 {  
                 .table {
-                    margin-top: 58px;
-    
-                    .row {
-                        display: flex;
-                        flex-direction: column;
-                        padding: 16px 0;
-    
-                        &:first-child {
-                            padding-top: 0;
-                        }
-    
-                        &:last-child {
-                            padding-bottom: 0;
+                    margin-top: 44px;
 
+                    .row {
+                        flex-wrap: wrap;
+
+                        &:not(:last-child) {
+                            margin-bottom: 17px;
                         }
-    
+
+                        &:last-child {
+                            .cell {
+                                padding-bottom: 13px;
+                            }  
+                        }
+                        
                         .cell {
-                            padding: 0;
-    
+                            padding: 0 12px 13px 0;
+                            
                             &:first-child {
                                 flex-basis: auto;
                                 border-right: none;
                             }
-    
+
                             &:last-child {
-                                padding-left: 0; 
-                                padding-top: 12px;
+                                padding-left: 0;
                             }
                         }
                     }
+                }
+
+                .contact {
+                    margin-top: 25px;
                 }
             }
         }
@@ -209,6 +210,19 @@
                     align-self: center;
                     max-width: 335px;
                     margin: 32px 0 19px;
+
+                    &::after {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    img {
+                        width: 100%;
+                        margin-top: 0;
+                        margin-left: 0;
+                    }
                 }
             }
         }
@@ -218,10 +232,26 @@
         .invitation__content {
             .line-2 {
                 .invitation_pic2 {
+                    &::after {
+                        width: 111%;
+                        height: 100%;
+                        top: 0px;
+                        left:  -20px;
+                    }
+
                     img {
-                        width: 375px;
+                        width: 111%;
+                        margin-top: 0px;
                         margin-left: -20px;
                     }
+                }
+
+                .text {
+                    margin-top: 10px;
+                }
+
+                .contact {
+                    font-size: 18px;
                 }
             }
         }
