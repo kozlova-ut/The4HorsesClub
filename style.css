@@ -27,6 +27,7 @@
   text-align: right;
 }
 .intro__content .text {
+  margin: 0;
   display: inline-block;
   max-width: 542px;
   font-family: "GolosText-Regular", sans-serif;
@@ -174,7 +175,7 @@
   width: 100%;
 }
 .invitation__content .line-2 .table {
-  margin-top: 60px;
+  margin-top: 58px;
 }
 .invitation__content .line-2 .table .row {
   display: flex;
@@ -182,29 +183,41 @@
 .invitation__content .line-2 .table .row:not(:last-child) {
   border-bottom: 2px solid #D0D0D0;
 }
-.invitation__content .line-2 .table .row:first-child span {
+.invitation__content .line-2 .table .row:first-child .cell {
   padding-top: 0;
 }
-.invitation__content .line-2 .table .row:last-child span {
+.invitation__content .line-2 .table .row:last-child .cell {
   padding-bottom: 0;
 }
-.invitation__content .line-2 .table .row span {
+.invitation__content .line-2 .table .row .cell {
   padding: 16px 16px 15px 0;
   font-size: 20px;
   line-height: 1.2;
   color: #313131;
 }
-.invitation__content .line-2 .table .row span:first-child {
+.invitation__content .line-2 .table .row .cell:first-child {
   flex-basis: 307px;
   border-right: 2px solid #D0D0D0;
   font-family: "GolosText-Regular", sans-serif;
   font-weight: 400;
   opacity: 0.7;
 }
-.invitation__content .line-2 .table .row span:last-child {
+.invitation__content .line-2 .table .row .cell:last-child {
   padding-left: 15px;
   font-family: "GolosText-Bold", sans-serif;
   font-weight: 700;
+}
+.invitation__content .line-2 .table .row .cell .through {
+  text-decoration: line-through;
+  text-decoration-color: #F54932;
+}
+.invitation__content .line-2 .contact {
+  margin: 47px 0 0;
+  font-family: "GolosText-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #3057A2;
 }
 @media (max-width: 1024px) {
   .invitation .invitation__content .text {

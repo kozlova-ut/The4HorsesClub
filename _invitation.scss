@@ -64,7 +64,7 @@
             }
 
             .table {
-                margin-top: 60px;
+                margin-top: 58px;
 
                 .row {
                     display: flex;
@@ -74,18 +74,18 @@
                     }
                     
                     &:first-child {
-                        span {
+                        .cell {
                             padding-top: 0;
                         }
                     }
 
                     &:last-child {
-                        span {
+                        .cell {
                             padding-bottom: 0;
                         }
                     }
 
-                    span {
+                    .cell {
                         padding: 16px 16px 15px 0;
                         font-size: 20px;
                         line-height: 1.2;
@@ -104,8 +104,22 @@
                             font-family: "GolosText-Bold", sans-serif;
                             font-weight: 700;  
                         }
+
+                        .through {
+                            text-decoration: line-through;
+                            text-decoration-color: $primary-accent;
+                        }
                     }
                 }
+            }
+
+            .contact {
+                margin: 47px 0 0;
+                font-family: 'GolosText-Regular', sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.2;
+                color: $secondary-accent;
             }
         }
     }
