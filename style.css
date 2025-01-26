@@ -119,6 +119,9 @@
   }
 }
 
+.invitation {
+  padding: 80px 0px 100px;
+}
 .invitation__content .text {
   font-family: "Merriweather-Regular", sans-serif;
   font-weight: 400;
@@ -136,7 +139,6 @@
   display: flex;
   gap: 64px;
   align-items: center;
-  padding-top: 80px;
 }
 .invitation__content .line-1 .invitation_pic1_1 {
   content: url("/img/invitation_pic1.png");
@@ -313,6 +315,122 @@
   }
 }
 
+.stages {
+  padding: 84px 0px;
+}
+.stages .heading {
+  max-width: 806px;
+}
+.stages .heading h2 {
+  display: inline;
+}
+.stages .heading span {
+  display: inline-block;
+  max-width: 280px;
+  margin-left: 16px;
+  font-family: "GolosText-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #3057A2;
+}
+.stages__content ol {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+  margin-top: 55px;
+}
+.stages__content ol li {
+  position: relative;
+  padding: 20px 21px 20px 72px;
+  background: url("/img/pattern.png");
+  font-family: "GolosText-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #313131;
+}
+.stages__content ol li:nth-child(3) {
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+.stages__content ol li:nth-child(7) {
+  grid-row: 3/4;
+  grid-column: 2/4;
+  padding-right: 40%;
+}
+.stages__content ol li::before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "GolosText-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media (max-width: 1280px) {
+  .stages__view {
+    max-width: 750px;
+    overflow: hidden;
+  }
+  .stages__content ol {
+    height: 300px;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(5, 100%);
+    grid-template-rows: auto 1fr;
+    row-gap: 0px;
+  }
+  .stages__content ol li:nth-child(3), .stages__content ol li:nth-child(6), .stages__content ol li:nth-child(7) {
+    grid-row: 1/3;
+    grid-column: auto;
+  }
+  .stages__content ol li:nth-child(1), .stages__content ol li:nth-child(3), .stages__content ol li:nth-child(4), .stages__content ol li:nth-child(6), .stages__content ol li:nth-child(7) {
+    padding: 62px 20px 0px 72px;
+  }
+  .stages__content ol li:nth-child(1)::before, .stages__content ol li:nth-child(3)::before, .stages__content ol li:nth-child(4)::before, .stages__content ol li:nth-child(6)::before, .stages__content ol li:nth-child(7)::before {
+    top: 62px;
+  }
+  .stages__content ol li:nth-child(2), .stages__content ol li:nth-child(5) {
+    padding: 30px 20px 0px 72px;
+  }
+  .stages__content ol li:nth-child(2)::before, .stages__content ol li:nth-child(5)::before {
+    top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .stages .heading h2 {
+    display: block;
+  }
+  .stages .heading span {
+    margin-left: 0;
+    margin-top: 12px;
+    max-width: none;
+  }
+}
+@media (max-width: 425px) {
+  .stages {
+    padding: 22px 0;
+  }
+  .stages .heading span {
+    font-size: 18px;
+  }
+  .stages__content ol li {
+    font-size: 18px;
+  }
+}
 @font-face {
   font-family: "GolosText-Bold";
   src: url() format("woff2"), url("/fonts/GolosText-Bold.woff") format("woff");
@@ -353,6 +471,12 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   max-width: 1366px;
   margin: 0px auto;
@@ -370,7 +494,7 @@ a {
 }
 
 .marquee {
-  width: 100vw;
+  width: 100%;
   padding: 18px 0;
   background: #F54932;
   overflow: hidden;
@@ -399,6 +523,16 @@ a {
   right: 12px;
 }
 
+h2 {
+  margin: 0;
+  font-family: "Merriweather-Regular", serif;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.2;
+  color: #313131;
+  text-transform: uppercase;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -417,6 +551,9 @@ a {
   .marquee__content span {
     font-size: 16px;
   }
+  h2 {
+    font-size: 40px;
+  }
 }
 @media (max-width: 640px) {
   .header {
@@ -424,5 +561,11 @@ a {
   }
   .header .logo {
     width: 213px;
+  }
+}
+@media (max-width: 425px) {
+  h2 {
+    font-size: 36px;
+    line-height: 1.1;
   }
 }/*# sourceMappingURL=style.css.map */

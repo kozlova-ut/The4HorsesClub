@@ -2,6 +2,7 @@
 @import '_variables.scss';
 @import '_intro.scss';
 @import '_invitation.scss';
+@import '_stages.scss';
 
 @font-face {
     font-family: "GolosText-Bold";
@@ -50,6 +51,12 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .container {
     max-width: 1366px;
     margin: 0px auto;
@@ -68,7 +75,7 @@ a {
 }
 
 .marquee {
-    width: 100vw;
+    width: 100%;
     padding: 18px 0;
     background: $primary-accent;
     overflow: hidden;
@@ -99,6 +106,16 @@ a {
     }
 }
 
+h2 {
+    margin: 0;
+    font-family: "Merriweather-Regular", serif;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 1.2;
+    color: $main-text;
+    text-transform: uppercase;
+}
+
 @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -118,6 +135,10 @@ a {
             }
         }
     }
+
+    h2 {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: $sm) {
@@ -128,5 +149,13 @@ a {
         .logo {
             width: 213px;
         }
+    }
+}
+
+@media (max-width: $xs) {
+
+    h2 {
+        font-size: 36px;
+        line-height: 1.1;
     }
 }
