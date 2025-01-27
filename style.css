@@ -365,6 +365,16 @@
   grid-column: 2/4;
   padding-right: 40%;
 }
+.stages__content ol li:nth-child(7)::after {
+  content: "";
+  display: block;
+  width: 403px;
+  height: 300px;
+  position: absolute;
+  right: -64px;
+  top: -130px;
+  background: url("/img/plane.png") no-repeat center/contain;
+}
 .stages__content ol li::before {
   content: counter(item);
   counter-increment: item;
@@ -389,11 +399,12 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
+    padding-top: 148px;
   }
   .stages__content .view {
     width: 100%;
     max-width: 750px;
-    overflow: hidden;
+    overflow-x: clip;
   }
   .stages__content .view ol {
     height: 300px;
@@ -418,6 +429,21 @@
   }
   .stages__content .view ol li:nth-child(2)::before, .stages__content .view ol li:nth-child(5)::before {
     top: 30px;
+  }
+  .stages__content .view ol li:nth-child(7)::after {
+    content: none;
+  }
+  .stages__content .view ol li:nth-child(1)::after {
+    content: "";
+    display: block;
+    width: 336px;
+    height: 300px;
+    position: absolute;
+    z-index: 100;
+    right: -10px;
+    top: -185px;
+    background: url("/img/plane.png") no-repeat center/contain;
+    transform: rotate(-3deg);
   }
   .stages__content .handler {
     margin-left: auto;
@@ -482,7 +508,6 @@
   .stages__content {
     flex-direction: column;
     gap: 28px;
-    padding-top: 148px;
   }
   .stages__content .handler {
     margin: 0px auto;

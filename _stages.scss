@@ -48,6 +48,18 @@
                     grid-row: 3/4;
                     grid-column: 2/4;
                     padding-right: 40%;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 403px;
+                        height: 300px;
+                        position: absolute;
+                        right: -64px;
+                        top: -130px;
+                        background: url('/img/plane.png') no-repeat center / contain;
+                    }
+                    
                 }
 
                 &::before {
@@ -81,11 +93,12 @@
             display: flex;
             align-items: flex-start;
             gap: 20px;
+            padding-top: 148px;
 
             .view {
                 width: 100%;
                 max-width: 750px;
-                overflow: hidden;
+                overflow-x: clip;
 
                 ol {
                     height: 300px;
@@ -121,6 +134,27 @@
     
                             &::before {
                                 top: 30px;
+                            }
+                        }
+
+                        &:nth-child(7) {
+                            &::after {
+                                content: none;
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 336px;
+                                height: 300px;
+                                position: absolute;
+                                z-index: 100;
+                                right: -10px;
+                                top: -185px;
+                                background: url('/img/plane.png') no-repeat center / contain;
+                                transform: rotate(-3deg);
                             }
                         }
                     }
@@ -207,8 +241,7 @@
         &__content {
             flex-direction: column;
             gap: 28px;
-            padding-top: 148px;
-
+            
             .handler {
                 margin: 0px auto;
             }
