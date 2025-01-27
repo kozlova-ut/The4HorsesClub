@@ -1,0 +1,65 @@
+.members {
+    padding: 100px 0;
+
+    ul {
+        margin-top: 60px;
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+
+        li {
+            padding: 0 37px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 320px;
+                height: 320px;
+                background: url('/img/avatar.png') no-repeat center / contain;
+            }
+
+            .name {
+                display: inline-block;
+                margin-top: 28px;
+                font-family: "GolosText-SemiBold", sans-serif;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 1.2;
+                color: $main-text;
+            }
+
+            .title {
+                display: inline-block;
+                margin-top: 6px;
+                font-family: "GolosText-Regular", sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.2;
+                color: rgba($color: $main-text, $alpha: 0.6);
+            }
+
+            .more-btn {
+                margin-top: 20px;
+                padding: 12px;
+                font-family: "GolosText-Medium", sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.2;
+                color: $secondary-accent;
+                border: 1px solid $secondary-accent;
+                border-radius: 62px;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    background: $secondary-accent;
+                    color: #ffffff;
+                }
+            }
+        }
+
+    }
+}
