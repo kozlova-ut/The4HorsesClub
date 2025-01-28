@@ -7,39 +7,43 @@
 
 @font-face {
     font-family: "GolosText-Bold";
-    src: url() format("woff2"), url("/fonts/GolosText-Bold.woff") format("woff");
+    src: url("/fonts/GolosText-Bold.woff2") format("woff2"), url("/fonts/GolosText-Bold.woff") format("woff");
 }
 
 @font-face {
     font-family: "GolosText-SemiBold";
-    src: url() format("woff2"), url("/fonts/GolosText-SemiBold.woff") format("woff");
+    src: url("/fonts/GolosText-SemiBold.woff2") format("woff2"), url("/fonts/GolosText-SemiBold.woff") format("woff");
 }
 
 @font-face {
     font-family: "GolosText-Medium";
-    src: url() format("woff2"), url("/fonts/GolosText-Medium.woff") format("woff");
+    src: url("/fonts/GolosText-Medium.woff2") format("woff2"), url("/fonts/GolosText-Medium.woff") format("woff");
 }
 
 @font-face {
     font-family: "GolosText-Regular";
-    src: url() format("woff2"), url("/fonts/GolosText-Regular.woff") format("woff");
+    src: url("/fonts/GolosText-Regular.woff2") format("woff2"), url("/fonts/GolosText-Regular.woff") format("woff");
 }
 
 
 @font-face {
     font-family: "Merriweather-Bold";
-    src: url() format("woff2"), url("/fonts/Merriweather-Bold.woff") format("woff");
+    src: url("/fonts/Merriweather-Bold.woff2") format("woff2"), url("/fonts/Merriweather-Bold.woff") format("woff");
 }
 
 @font-face {
     font-family: "Merriweather-Regular";
-    src: url() format("woff2"), url("/fonts/Merriweather-Regular.woff") format("woff");
+    src: url("/fonts/Merriweather-Regular.woff2") format("woff2"), url("/fonts/Merriweather-Regular.woff") format("woff");
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -132,52 +136,50 @@ h2 {
     text-transform: uppercase;
 }
 
+.handler {
+    display: flex;
+    align-items: center;
+
+    .btn {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        background: $main-text;
+        border-radius: 50%;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        &.btn-next {
+            transform: rotate(180deg);
+        }
+
+        &.inactive {
+            pointer-events: none;
+            background: $inactive-color;
+        }
+
+        &::before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            border-left: 2px solid #ffffff;
+            border-top: 2px solid #ffffff;
+            position: absolute;
+            left: 17px;
+            top: 15px;
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            background: $hover-accent;
+        }
+    }
+}
+
 @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
-}
-
-@media (max-width: $xl) {
-    .handler {
-        display: flex;
-        align-items: center;
-    
-        .btn {
-            position: relative;
-            display: inline-block;
-            width: 44px;
-            height: 44px;
-            background: $main-text;
-            border-radius: 50%;
-            transition: all .3s ease-in-out;
-            cursor: pointer;
-    
-            &.btn-next {
-                transform: rotate(180deg);
-            }
-    
-            &.inactive {
-                pointer-events: none;
-                background: $inactive-color;
-            }
-    
-            &::before {
-                content: "";
-                width: 14px;
-                height: 14px;
-                border-left: 2px solid #ffffff;
-                border-top: 2px solid #ffffff;
-                position: absolute;
-                left: 15px;
-                top: 15px;
-                transform: rotate(-45deg);
-            }
-    
-            &:hover {
-                background: $hover-accent;
-            }
-        }
-    }
 }
 
 @media (max-width: $lg) {

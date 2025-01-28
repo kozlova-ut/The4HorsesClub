@@ -1,7 +1,8 @@
-const stages = document.querySelector('.stages ol');
-const pagination = document.querySelector('.pagination');
-const btnPrev = document.querySelector('.btn-prev');
-const btnNext = document.querySelector('.btn-next');
+(() => {
+    const stages = document.querySelector('.stages ol');
+const pagination = document.querySelector('.stages .pagination');
+const btnPrev = document.querySelector('.stages .btn-prev');
+const btnNext = document.querySelector('.stages .btn-next');
 
 let translateValue = 0;
 let currentPage = 1;
@@ -52,3 +53,4 @@ btnNext.addEventListener('click', () => {
 });
 
 updatePagination();
+}) ();
