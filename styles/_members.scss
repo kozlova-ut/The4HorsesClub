@@ -10,6 +10,18 @@
             gap: 14px;
             right: 0;
             top: -56px;
+
+            .pagination {
+                font-family: "GolosText-Regular", sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.2;
+                color: rgba($color: $main-text, $alpha: 0.6);
+
+                span {
+                    color: rgba($color: $main-text, $alpha: 1);
+                }
+            }
         }
 
         .view {
