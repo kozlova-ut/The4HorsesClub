@@ -23,14 +23,14 @@
             align-items: center;
             
             .invitation_pic1_1 {
-                content: url("/img/invitation_pic1.png");
+                content: url("img/invitation_pic1.png");
                 width: 335px;
                 margin: 24px 0;
                 display: none;
             }
 
             .invitation_pic1_2 {
-                content: url("/img/invitation_pic1.png");
+                content: url("img/invitation_pic1.png");
                 width: 394px;
             }
         } 
@@ -52,7 +52,7 @@
                     left: -29px;
                     width: 103%;
                     height: calc(100% + 29px);
-                    background: url('/img/invitation_pic2_pattern.png') no-repeat center / cover;
+                    background: url('img/invitation_pic2_pattern.png') no-repeat center / cover;
                     mix-blend-mode: color-burn;
                 }
 
