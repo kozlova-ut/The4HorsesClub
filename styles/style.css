@@ -2,7 +2,7 @@
 @import 'normalize.css';
 .intro {
   padding: 124px 0 130px;
-  background: url("img/intro.png") no-repeat center/cover;
+  background: url("../img/intro.png") no-repeat center/cover;
 }
 .intro__content h1 {
   margin: 0 0 24px;
@@ -96,7 +96,7 @@
 @media (max-width: 640px) {
   .intro {
     padding: 90px 0 291px;
-    background: url("img/intro_sm.png") no-repeat right bottom/cover;
+    background: url("../img/intro_sm.png") no-repeat right bottom/cover;
   }
   .intro__content h1 {
     max-width: 335px;
@@ -141,13 +141,13 @@
   align-items: center;
 }
 .invitation__content .line-1 .invitation_pic1_1 {
-  content: url("img/invitation_pic1.png");
+  content: url("../img/invitation_pic1.png");
   width: 335px;
   margin: 24px 0;
   display: none;
 }
 .invitation__content .line-1 .invitation_pic1_2 {
-  content: url("img/invitation_pic1.png");
+  content: url("../img/invitation_pic1.png");
   width: 394px;
 }
 .invitation__content .line-2 {
@@ -167,7 +167,7 @@
   left: -29px;
   width: 103%;
   height: calc(100% + 29px);
-  background: url("img/invitation_pic2_pattern.png") no-repeat center/cover;
+  background: url("../img/invitation_pic2_pattern.png") no-repeat center/cover;
   mix-blend-mode: color-burn;
 }
 .invitation__content .line-2 .invitation_pic2 img {
@@ -352,7 +352,7 @@
 .stages__content ol li {
   position: relative;
   padding: 20px 21px 20px 72px;
-  background: url("img/pattern.png");
+  background: url("../img/pattern.png");
   font-family: "GolosText-Medium", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -379,7 +379,7 @@
   position: absolute;
   right: -64px;
   top: -130px;
-  background: url("img/plane.png") no-repeat center/contain;
+  background: url("../img/plane.png") no-repeat center/contain;
 }
 .stages__content ol li::before {
   content: counter(item);
@@ -447,7 +447,7 @@
     z-index: 100;
     left: 10px;
     top: -185px;
-    background: url("img/plane.png") no-repeat center/contain;
+    background: url("../img/plane.png") no-repeat center/contain;
     transform: rotate(-4deg);
   }
   .stages__content .handler {
@@ -545,7 +545,7 @@
   width: 100%;
   height: auto;
   min-height: 320px;
-  background: url("img/avatar.png") no-repeat center/contain;
+  background: url("../img/avatar.png") no-repeat center/contain;
 }
 .members__content .view ul li .name {
   display: inline-block;
@@ -623,27 +623,27 @@
 }
 @font-face {
   font-family: "GolosText-Bold";
-  src: url("fonts/GolosText-Bold.woff2") format("woff2"), url("fonts/GolosText-Bold.woff") format("woff");
+  src: url("../fonts/GolosText-Bold.woff2") format("woff2"), url("../fonts/GolosText-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "GolosText-SemiBold";
-  src: url("fonts/GolosText-SemiBold.woff2") format("woff2"), url("fonts/GolosText-SemiBold.woff") format("woff");
+  src: url("../fonts/GolosText-SemiBold.woff2") format("woff2"), url("../fonts/GolosText-SemiBold.woff") format("woff");
 }
 @font-face {
   font-family: "GolosText-Medium";
-  src: url("fonts/GolosText-Medium.woff2") format("woff2"), url("fonts/GolosText-Medium.woff") format("woff");
+  src: url("../fonts/GolosText-Medium.woff2") format("woff2"), url("../fonts/GolosText-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "GolosText-Regular";
-  src: url("fonts/GolosText-Regular.woff2") format("woff2"), url("fonts/GolosText-Regular.woff") format("woff");
+  src: url("../fonts/GolosText-Regular.woff2") format("woff2"), url("../fonts/GolosText-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Merriweather-Bold";
-  src: url("fonts/Merriweather-Bold.woff2") format("woff2"), url("fonts/Merriweather-Bold.woff") format("woff");
+  src: url("../fonts/Merriweather-Bold.woff2") format("woff2"), url("../fonts/Merriweather-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Merriweather-Regular";
-  src: url("fonts/Merriweather-Regular.woff2") format("woff2"), url("fonts/Merriweather-Regular.woff") format("woff");
+  src: url("../fonts/Merriweather-Regular.woff2") format("woff2"), url("../fonts/Merriweather-Regular.woff") format("woff");
 }
 *,
 *::before,
